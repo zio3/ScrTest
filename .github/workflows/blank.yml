@@ -23,8 +23,8 @@ jobs:
       - name: Run a one-line script
         run: echo Hello, world!
 
-    - name: Setup Start Notification
-      uses: tsickert/discord-webhook@v0.0.7
-      with:
-        webhook-url: ${{secrets.RESTUPDATE}}
-        content: "Setup Start ${{github.repository }}"
+      - name: Setup Start Notification
+        uses: tsickert/discord-webhook@v0.0.7
+        with:
+          webhook-url: ${{secrets.RESTUPDATE}}
+          content: "Setup Start ${{github.repository }}"
